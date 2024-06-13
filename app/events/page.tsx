@@ -56,7 +56,7 @@ export default function Home() {
             <dl className="space-y-16 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-16 sm:space-y-0 lg:gap-x-10">
               
               {data.events.map((faq, i) => (
-                <Link
+                <Link key={i}
                   href={`/events/${faq.short}`} //All the images are sample images
                 >
                   <Card key={i} className="shadow-xl bg-cover relative z-0 rounded-lg transition-all duration-300 hover:scale-105 ">
