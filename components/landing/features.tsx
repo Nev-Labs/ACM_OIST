@@ -30,7 +30,7 @@ export default function Features() {
         },
       }}
     >
-      <div className="mx-auto mt-12 max-w-7xl px-6 sm:mt-56 lg:px-8">
+      <div className="mx-auto mt-12 max-w-7xl px-6 sm:mt-24 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
           <motion.h2
             variants={FADE_UP_ANIMATION_VARIANTS}
@@ -42,13 +42,13 @@ export default function Features() {
             variants={FADE_UP_ANIMATION_VARIANTS}
             className="mt-2 text-3xl font-bold tracking-tight sm:text-4xl"
           >
-            Beautiful Framer Motion Animations
+            What you can expect
           </motion.p>
           <motion.p
             variants={FADE_UP_ANIMATION_VARIANTS}
             className="mt-6 text-lg leading-8"
           >
-            This example contains the fade up animation variant.
+            Future Events
           </motion.p>
         </div>
       </div>

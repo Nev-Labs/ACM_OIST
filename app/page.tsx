@@ -43,8 +43,8 @@ export default function Home() {
         <Features />
 
         {/* Testimonial section */}
-        <div className="mx-auto mt-32 max-w-7xl sm:mt-56 sm:px-6 lg:px-8">
-          <div className="relative overflow-hidden  px-6 py-20 shadow-xl sm:rounded-3xl sm:px-10 sm:py-24 md:px-12 lg:px-20">
+        {/* <div className="mx-auto mt-32 max-w-7xl sm:mt-56 sm:px-6 lg:px-8"> */}
+          {/* <div className="relative overflow-hidden  px-6 py-20 shadow-xl sm:rounded-3xl sm:px-10 sm:py-24 md:px-12 lg:px-20">
             <div className="absolute inset-0 bg-gray-900/90 mix-blend-multiply" />
             <div
               className="absolute -left-80 -top-56 transform-gpu blur-3xl"
@@ -72,8 +72,8 @@ export default function Home() {
             </div>
 
             <Blockquote />
-          </div>
-        </div>
+          </div> */}
+        {/* </div> */}
 
         {/* Info section */}
       </main>

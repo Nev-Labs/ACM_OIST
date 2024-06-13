@@ -1,7 +1,8 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { GitHubLogoIcon, TwitterLogoIcon } from "@radix-ui/react-icons";
+import { GitHubLogoIcon } from "@radix-ui/react-icons";
+import { MdMailOutline } from "react-icons/md";
 import { Button } from "@/components/ui/button";
 import ModeToggle from "@/components/shared/mode-toggle";
 import NavLinks from "@/components/shared/nav-links";
@@ -57,16 +58,16 @@ export default function MainNav() {
         </div>
         <div className="hidden lg:flex space-x-1 z-50">
           <Link
-            href=""
+            href="deepshikhapatel@oriental.ac.in"
             rel="noreferrer"
             target="_blank"
           >
             <Button className="flex items-center" variant="ghost" size="icon">
-              <TwitterLogoIcon className="h-4 w-4" />
+              <MdMailOutline className="h-4 w-4" />
             </Button>
           </Link>
           <Link
-            href=""
+            href="https://github.com/Nev-Labs/ACM_OIST"
             rel="noreferrer"
             target="_blank"
           >

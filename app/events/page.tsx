@@ -48,14 +48,13 @@ export default function Home() {
 
   return (
     <div>
-      <motion.div
-        variants={FADE_DOWN_ANIMATION_VARIANTS}
-        className=" text-transparent bg-clip-text bg-gradient-to-br from-indigo-600 from-20% via-primary via-30% to-indigo-600 text-4xl font-bold tracking-tight sm:text-6xl"
-      >
+
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mt-20">
-
+          <div className='font-bold text-3xl'>Events</div>
+          <p className='pb-10'>These are all the events conducted by the ACM Student chapter</p>
             <dl className="space-y-16 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-16 sm:space-y-0 lg:gap-x-10">
+              
               {data.events.map((faq, i) => (
                 <Link
                   href={`/events/${faq.short}`} //All the images are sample images
@@ -78,7 +77,7 @@ export default function Home() {
           </div>
 
         </div>
-      </motion.div>
+
     </div>
   );
 }

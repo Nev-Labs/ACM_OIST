@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import {
   Sheet,
   SheetContent,
@@ -6,18 +7,15 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-
-import React from "react";
 import { Button } from "../ui/button";
 import {
   GitHubLogoIcon,
   HamburgerMenuIcon,
-  HomeIcon,
-  SunIcon,
   TwitterLogoIcon,
 } from "@radix-ui/react-icons";
 import ModeToggle from "./mode-toggle";
 import Link from "next/link";
+
 const projects = [
   {
     name: "Home",
@@ -33,17 +31,21 @@ const projects = [
   },
   {
     name: "projects",
-    href: "/project",
+    href: "/projects",
   },
 ];
+
 function classNames(...classes: any[]) {
   return classes.filter(Boolean).join(" ");
 }
+
 export default function NavSheet() {
+  const [open, setOpen] = useState(false);
+
   return (
-    <Sheet>
+    <Sheet open={open} onOpenChange={setOpen}>
       <SheetTrigger asChild>
-        <Button variant="ghost" size="icon">
+        <Button variant="ghost" size="icon" onClick={() => setOpen(true)}>
           <HamburgerMenuIcon />
         </Button>
       </SheetTrigger>
@@ -53,29 +55,13 @@ export default function NavSheet() {
           <SheetDescription>
             <div className="flex justify-between items-center">
               <div className="flex items-center">
-                <Link
-                  href="#"
-                  rel="noreferrer"
-                  target="_blank"
-                >
-                  <Button
-                    className="flex items-center"
-                    variant="ghost"
-                    size="icon"
-                  >
+                <Link href="#" rel="noreferrer" target="_blank">
+                  <Button className="flex items-center" variant="ghost" size="icon">
                     <TwitterLogoIcon className="h-4 w-4" />
                   </Button>
                 </Link>
-                <Link
-                  href="#"
-                  rel="noreferrer"
-                  target="_blank"
-                >
-                  <Button
-                    className="flex items-center"
-                    variant="ghost"
-                    size="icon"
-                  >
+                <Link href="#" rel="noreferrer" target="_blank">
+                  <Button className="flex items-center" variant="ghost" size="icon">
                     <GitHubLogoIcon className="h-4 w-4" />
                   </Button>
                 </Link>
@@ -91,6 +77,7 @@ export default function NavSheet() {
                     key={project.name}
                     href={project.href}
                     className="col-span-1 flex rounded-md shadow-sm hover:bg-primary-foreground transition-all duration-200"
+                    onClick={() => setOpen(false)} // Close the sheet on button click
                   >
                     <div className="flex flex-1 items-center justify-between truncate rounded-md border">
                       <div className="flex-1 truncate px-4 py-2 text-sm">
