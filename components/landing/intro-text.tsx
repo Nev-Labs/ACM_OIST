@@ -40,9 +40,9 @@ export default function IntroText() {
           </motion.h1>
           <motion.p
             variants={FADE_DOWN_ANIMATION_VARIANTS}
-            className="mt-6 text-lg leading-8"
+            className="mt-6 text-lg leading-8 font-bold 23"
           >
-            QUOTE....
+           ACM OIST-Bhopal is a student chapter highly focused on planning and organising events for coding and development.
           </motion.p>
 
          
