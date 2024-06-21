@@ -1,6 +1,5 @@
 // import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import Image from "next/image";
-import Link from "next/link";
 import {
   Card,
   CardContent,
@@ -8,9 +7,10 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card"
+} from "@/components/ui/card";
+// import { Separator } from "@/components/ui/separator"
 
-const projects = () => {
+const projects = ({ params }: { params: { slugs: string } }) => {
   const data = {
     projects: [
       {
@@ -59,28 +59,40 @@ const projects = () => {
   return (
     <div>
       <div className="mx-auto max-w-7xl px-6 py-16 sm:py-24 lg:px-8">
-        <div className="mt-20">
-          <div className="font-bold mb-5 text-3xl">Projects</div>
-          <dl className="space-y-16 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-16 sm:space-y-0 lg:gap-x-10">
-            {data.projects.map((faq, i) => (
-              <Link
-                key={i}
-                href={`/projects/${faq.short}`} //All the images are sample images
-              >
-                <Card
+        
+          {data.projects.map((short, i) =>
+            short.short !== params.slugs ? (
+              <div key={i}></div>
+            ) : (
+              <div key={i}>
+                <dl
                   key={i}
-                  className="shadow-xl bg-cover relative z-0 rounded-lg transition-all duration-300 hover:scale-105 "
+                  className="space-y-16 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-16 sm:space-y-0 lg:gap-x-10"
                 >
-                  
-                 <Image width={300} height={300} src={`/${faq.short}.png`} alt="image description" className='w-full h-full' quality={100} />
-                    <CardHeader className="flex flex-row items-center justify-between space-y-1"></CardHeader>
-                  <CardContent className=""></CardContent>
-                </Card>
+                  <Card className=" shadow-2xl rounded-xl bg-cover relative z-0 transition-all duration-300 hover:scale-105">
+                    <Image
+                      width={500}
+                      height={200}
+                      src={`/${params.slugs}.png`}
+                      alt="image description"
+                      className="w-full h-full"
+                      quality={100}
+                      />
+                    {/* <CardHeader className="flex flex-row items-center justify-between space-y-1 pb-2"></CardHeader> */}
+                    {/* <CardContent></CardContent> */}
+                  </Card>
+                  <div>
+                    <h2 className="font-bold border-gray-50 text-2xl pb-2 border-b-2 ">{short.title}</h2>
+                    <p className="mt-2">{short.date}</p>
+                    {/* <div className='pb-8'>  <Separator /></div> */}
 
-              </Link>
-            ))}
-          </dl>
-        </div>
+                    <h2 className="text-xl mt-2">{short.description}</h2>
+                  </div>
+                </dl>
+              </div>
+            )
+          )}
+       
 
         <div className="mt-20">
           <dl className="space-y-16 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-16 sm:space-y-0 lg:gap-x-10"></dl>
