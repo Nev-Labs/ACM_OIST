@@ -11,11 +11,11 @@ import { Button } from "../ui/button";
 import {
   GitHubLogoIcon,
   HamburgerMenuIcon,
-  TwitterLogoIcon,
 } from "@radix-ui/react-icons";
 import ModeToggle from "./mode-toggle";
 import Link from "next/link";
 
+import { MdMailOutline } from "react-icons/md";
 const projects = [
   {
     name: "Home",
@@ -24,6 +24,10 @@ const projects = [
   {
     name: "Event",
     href: "/events",
+  },
+  {
+    name: "Team",
+    href: "/team",
   },
   {
     name: "About",
@@ -55,9 +59,13 @@ export default function NavSheet() {
           <SheetDescription>
             <div className="flex justify-between items-center">
               <div className="flex items-center">
-                <Link href="#" rel="noreferrer" target="_blank">
+                <Link
+                  href="deepshikhapatel@oriental.ac.in"
+                  rel="noreferrer"
+                  target="_blank"
+                >
                   <Button className="flex items-center" variant="ghost" size="icon">
-                    <TwitterLogoIcon className="h-4 w-4" />
+                    <MdMailOutline className="h-4 w-4" />
                   </Button>
                 </Link>
                 <Link href="#" rel="noreferrer" target="_blank">

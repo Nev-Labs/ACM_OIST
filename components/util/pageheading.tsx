@@ -6,10 +6,10 @@ interface PageheadProps {
     return (
       <div className="lg:flex lg:items-center lg:justify-between">
         <div className="min-w-0 flex-1 items-center">
-          <h2 className="text-2xl font-bold text-center leading-7 text-white-900 sm:truncate sm:text-6xl sm:tracking-tight">
+          <h2 className="text-4xl font-bold text-center leading-7 text-white-900 sm:truncate sm:text-6xl sm:tracking-tight">
             Team of {title}
           </h2>
-          <div className="mt-1 dots justify-center flex items-center flex-col sm:mt-0 sm:flex-row sm:flex-wrap sm:space-x-3">
+          <div className="mt-1 dots justify-center flex items-center flex-row space-x-3 sm:mt-0 sm:flex-row sm:flex-wrap sm:space-x-3">
             <div className="mt-2 flex items-center text-sm text-white-500">
               Home
             </div>

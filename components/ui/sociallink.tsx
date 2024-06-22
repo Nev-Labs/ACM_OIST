@@ -5,38 +5,40 @@ import { FaLinkedin } from "react-icons/fa";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
   
-  const SocialIconList = () => {
-    return (
-        <div className="hidden lg:flex space-x-1 z-50">
-          <Link
-            href="deepshikhapatel@oriental.ac.in"
-            rel="noreferrer"
-            target="_blank"
-          >
-            <Button className="flex items-center" variant="ghost" size="icon">
-              <MdMailOutline className="h-4 w-4" />
-            </Button>
-          </Link>
-          <Link
-            href="https://github.com/Nev-Labs/ACM_OIST"
-            rel="noreferrer"
-            target="_blank"
-          >
-            <Button className="flex items-center" variant="ghost" size="icon">
-              <GitHubLogoIcon className="h-4 w-4" />
-            </Button>
-          </Link>
-          <Link
-            href="deepshikhapatel@oriental.ac.in"
-            rel="noreferrer"
-            target="_blank"
-          >
-            <Button className="flex items-center" variant="ghost" size="icon">
-              <FaLinkedin className="h-4 w-4" />
-            </Button>
-          </Link>
-        </div>
-    );
+interface LinkObj {
+  platform: 'email' | 'github' | 'linkedin';
+  link: string;
+}
+
+interface SocialIconListProps {
+  links: LinkObj[];
+}
+
+const SocialIconList: React.FC<SocialIconListProps> = ({ links }) => {
+  const renderIcon = (platform: LinkObj['platform']) => {
+      switch (platform) {
+          case 'email':
+              return <MdMailOutline className="h-4 w-4" />;
+          case 'github':
+              return <GitHubLogoIcon className="h-4 w-4" />;
+          case 'linkedin':
+              return <FaLinkedin className="h-4 w-4" />;
+          default:
+              return null;
+      }
   };
+
+  return (
+      <div className="hidden lg:flex space-x-1 z-50">
+          {links.map((linkObj, index) => (
+              <Link href={linkObj.link} rel="noreferrer" target="_blank" key={index}>
+                  <Button className="flex items-center" variant="ghost" size="icon">
+                      {renderIcon(linkObj.platform)}
+                  </Button>
+              </Link>
+          ))}
+      </div>
+  );
+};
   
   export default SocialIconList;
