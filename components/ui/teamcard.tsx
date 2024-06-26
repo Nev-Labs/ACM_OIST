@@ -1,4 +1,6 @@
 import * as React from "react"
+import Image from 'next/image'
+
 
 import { cn } from "@/lib/utils"
 
@@ -26,7 +28,13 @@ const CardImage = React.forwardRef<
     className={cn("flex flex-col items-center space-y-1", className)}
     {...props}
   >
-    <img src={src} alt={alt} className="w-full  h-auto rounded-full object-cover" style={{ maxHeight: '200px', maxWidth: '200px' }} />
+     <Image
+      className="w-full  h-auto rounded-full object-cover"
+      src={src}
+      alt={alt}
+      width={200}
+      height={200}
+    />
   </div>
 ));
 CardImage.displayName = "CardImage";
