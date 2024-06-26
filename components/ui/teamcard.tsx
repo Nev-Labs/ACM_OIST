@@ -29,11 +29,12 @@ const CardImage = React.forwardRef<
     {...props}
   >
      <Image
-      className="w-full  h-auto rounded-full object-cover"
+     style={{ maxWidth: '200px', maxHeight: '200px', width: '100%' }}
+      className="rounded-full object-cover"
       src={src}
       alt={alt}
       width={200}
-      height={200}
+      height={150}
     />
   </div>
 ));
