@@ -29,7 +29,7 @@ const CardImage = React.forwardRef<
     {...props}
   >
      <Image
-     style={{ maxWidth: '200px', maxHeight: '200px', width: '100%' }}
+     style={{ width: '200px', height: '200px' }}
       className="rounded-full object-cover"
       src={src}
       alt={alt}

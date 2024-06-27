@@ -1,12 +1,12 @@
 import * as React from "react"
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import { MdMailOutline } from "react-icons/md";
-import { FaLinkedin } from "react-icons/fa";
+import { FaLinkedin, FaInstagram, FaTwitter } from "react-icons/fa";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
   
 interface LinkObj {
-  platform: 'email' | 'github' | 'linkedin';
+  platform: 'email' | 'github' | 'linkedin' | 'insta' | 'twitter';
   link: string;
 }
 
@@ -23,6 +23,10 @@ const SocialIconList: React.FC<SocialIconListProps> = ({ links }) => {
               return <GitHubLogoIcon className="h-4 w-4" />;
           case 'linkedin':
               return <FaLinkedin className="h-4 w-4" />;
+          case 'insta':
+              return <FaInstagram className="h-4 w-4" />;
+          case 'twitter':
+              return <FaTwitter className="h-4 w-4" />;
           default:
               return null;
       }
