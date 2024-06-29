@@ -24,7 +24,7 @@ const chair23: Member[] = [
   {
     id: 5338273,
     name: 'Shreyaansh Shrivastava',
-    img: 'img_2.jpg',
+    img: 'shreyaansh_img.jpg',
     position: 'Chair',
     links: [
       {
@@ -60,7 +60,7 @@ const chair23: Member[] = [
   {
     id: 9740089,
     name: 'Niharika Jha',
-    img: 'simmi_img.jpg',
+    img: 'niharika_img.jpg',
     position: 'Vice Chair',
     links: [
       {
@@ -80,7 +80,7 @@ const chair23: Member[] = [
   {
     id: 2684060,
     name: 'Nitesh Kumar',
-    img: 'shiv_img1.jpg',
+    img: 'nitesh_img.jpg',
     position: 'Vice Chair',
     links: [
       {
@@ -95,11 +95,11 @@ const chair23: Member[] = [
   }
 ];
 
-const members23: Member[] = [
+const coreMembers23: Member[] = [
   {
     id: 3187615,
     name: 'Mimansha Pranjal',
-    img: 'simmi_img.jpg',
+    img: 'mimansha_img.jpg',
     position: 'Membership Chair',
     links: [
       {
@@ -119,7 +119,7 @@ const members23: Member[] = [
   {
     id: 8665957,
     name: 'Bharat Jain',
-    img: 'shiv_img1.jpg',
+    img: 'bharat_img.jpeg',
     position: 'Secretary',
     links: [
       {
@@ -178,9 +178,28 @@ const members23: Member[] = [
   },
   {
     id: 3,
+    name: 'Poonam Raghuwanshi',
+    img: 'poonam_img.jpg',
+    position: 'Treasurer',
+    links: [
+      {
+        platform: 'github',
+        link: 'https://github.com/poonamraghuwanshi26',
+      },
+      {
+        platform: 'linkedin',
+        link: 'https://www.linkedin.com/in/poonam-raghuwanshi-bba721289?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
+      },
+    ],
+  }
+];
+
+const members23: Member[] = [
+  {
+    id: 3,
     name: 'Ashish Baghel',
     img: 'img_2.jpg',
-    position: 'Member',
+    position: 'member',
     links: [
       {
         platform: 'github',
@@ -199,7 +218,7 @@ const members24: Member[] = [];
 const Team = () => {
   return (
     <div className="min-h-screen bg-background">
-      <main className="isolate mb-8">
+      <main className="isolate mb-2">
         {/* Hero section */}
         <div className="relative pt-0 sm:pt-10">
           <div
@@ -302,6 +321,48 @@ const Team = () => {
                   <div className="border-t border-gray-700 flex-1 max-w-7xl"></div>
                 </div>
                 <div className="flex flex-wrap justify-center p-4">
+                  {coreMembers23.length > 0 ? (
+                    coreMembers23.map((data) => (
+                        <motion.div
+                        className="p-4"
+                        key={data.id}
+                        initial="hidden"
+                        animate="show"
+                        variants={{
+                          hidden: { opacity: 0, scale: 0.8 },
+                          show: {
+                            opacity: 1,
+                            scale: 1,
+                            transition: {
+                              staggerChildren: 0.2,
+                            },
+                          },
+                        }}
+                      >
+                        <Card className="max-w-sm mx-auto">
+                          <CardHeader className="text-white">
+                            <CardImage src={`/team/${data.img}`} alt="Card Image" />
+                            <CardTitle>{data.name}</CardTitle>
+                            <CardDescription>{data.position}</CardDescription>
+                          </CardHeader>
+                          <CardFooter className="bg-white-100">
+                            <SocialIconList links={data.links} />
+                          </CardFooter>
+                        </Card>
+                      </motion.div>
+                    ))
+                  ) : (
+                    <p className="p-10 my-10">The data is yet to be uploaded</p>
+                  )}
+                </div>
+                <div className='text-center mb-2'>
+                <span className="text-sm text-gray-200">Office Bearers</span>
+                </div>
+                <div className="flex  justify-center items-center">
+                  <div className="border-t border-gray-700 flex-1 max-w-7xl"></div>
+                </div>
+                {/* Normal Members */}
+                <div className="flex flex-wrap justify-center p-4">
                   {members23.length > 0 ? (
                     members23.map((data) => (
                         <motion.div
@@ -336,7 +397,6 @@ const Team = () => {
                     <p className="p-10 my-10">The data is yet to be uploaded</p>
                   )}
                 </div>
-                
               </TabsContent>
               <TabsContent value="tab3">
                 <PageHead title="2024" />
