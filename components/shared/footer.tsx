@@ -1,6 +1,7 @@
 'use client'
 import { Separator } from "@radix-ui/react-dropdown-menu"; // Assuming this is needed elsewhere
-
+import { MdMailOutline } from "react-icons/md";
+import Link from "next/link";
 export default function Footer() {
   return (
     <div className="mx-auto max-w-7xl px-6 lg:px-8 py-8">
@@ -40,16 +41,18 @@ export default function Footer() {
               <h3 className="text-lg font-medium text-balance">Contact</h3>
               <ul className="text-base text-muted-foreground list-none pl-0">
                 <li className="sm:text-right">
-                  <a href="deepshikhapatel@oriental.ac.in" className="hover:underline">
+             
                   deepshikhapatel@oriental.ac.in
-                  </a>
+                  
+             
                 </li>
                 {/* Add social media links (icons or text) */}
               </ul>
             </div>
+   
           </div>
-
-         
+       
+        
 
           <div className="container flex flex-col items-center justify-between gap-2 pt-4 pb-2 text-sm text-muted-foreground md:flex-row md:justify-center">
             <p className="md:text-left">

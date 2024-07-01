@@ -2,7 +2,7 @@
 import IntroText from "@/components/landing/intro-text";
 import Features from "@/components/landing/features";
 import Blockquote from "@/components/landing/blockquote";
-import Info from "@/components/landing/info";
+
 
 export default function Home() {
   return (

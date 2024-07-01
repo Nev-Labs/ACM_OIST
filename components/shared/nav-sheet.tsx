@@ -29,14 +29,14 @@ const projects = [
     name: "Team",
     href: "/team",
   },
-  {
-    name: "About",
-    href: "/about",
-  },
-  {
-    name: "projects",
-    href: "/projects",
-  },
+  // {
+  //   name: "About",
+  //   href: "/about",
+  // },
+  // {
+  //   name: "projects",
+  //   href: "/projects",
+  // },
 ];
 
 function classNames(...classes: any[]) {
@@ -60,7 +60,7 @@ export default function NavSheet() {
             <div className="flex justify-between items-center">
               <div className="flex items-center">
                 <Link
-                  href="deepshikhapatel@oriental.ac.in"
+                  href="mailto:deepshikhapatel@oriental.ac.in"
                   rel="noreferrer"
                   target="_blank"
                 >

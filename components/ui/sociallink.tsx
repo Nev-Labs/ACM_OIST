@@ -33,7 +33,7 @@ const SocialIconList: React.FC<SocialIconListProps> = ({ links }) => {
   };
 
   return (
-      <div className="hidden lg:flex space-x-1 z-50">
+      <div className="flex space-x-1 z-50">
           {links.map((linkObj, index) => (
               <Link href={linkObj.link} rel="noreferrer" target="_blank" key={index}>
                   <Button className="flex items-center" variant="ghost" size="icon">

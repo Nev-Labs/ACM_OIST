@@ -26,16 +26,17 @@ const CardImage = React.forwardRef<
   <div
     ref={ref}
     className={cn("flex flex-col items-center space-y-1", className)}
+    style={{ padding: 0, margin: 0, overflow: 'visible' }} // Ensure no padding/margin/overflow issues
     {...props}
   >
-     <Image
-     style={{ width: '200px', height: '200px' }}
-      className="rounded-full object-cover"
-      src={src}
+    <Image
+      className="rounded-full overflow-hidden w-[190px] h-[190px]"
+      src={`${src}?v=${Math.random()}`} // Cache busting (optional)
       alt={alt}
       width={200}
-      height={150}
+      height={200}
     />
+  
   </div>
 ));
 CardImage.displayName = "CardImage";

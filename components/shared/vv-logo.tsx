@@ -26,7 +26,7 @@ export default function VVLogo() {
 
       <Link href="/">
         <Button variant="link" className="pt-12 text-lg">
-          <Image  alt="" src="/logo1.png" width={100} height={100} quality={100} className="w-20 h-20" />
+          <Image  alt="" src="./logo1.png" width={100} height={100} quality={100} className="w-20 h-20" />
           Student Chapter OIST
         </Button>
       </Link>
