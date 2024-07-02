@@ -245,9 +245,14 @@ const Team = () => {
                   <TabsTrigger value="tab3">2024</TabsTrigger>
                 </TabsList>
               </div>
+              <TabsContent value="tab2">
+              <div className='flex justify-center'>
+              <p className="p-10 my-10 font-bold text-2xl">The data is yet to be uploaded</p>
+              </div>
+              </TabsContent>
               <TabsContent value="tab3">
                 <PageHead title="2024" />
-                <div className="flex flex-wrap  p-4">
+                <div className="flex flex-wrap justify-center p-4">
                   {Members.length > 0 ? (
                     Members.map((data) => (
                       <motion.div
