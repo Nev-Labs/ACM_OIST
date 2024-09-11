@@ -248,7 +248,7 @@ const Team = () => {
                 </TabsList>
               </div>
               <TabsContent value="tab1">
-                <PageHead title="2022" />
+                <PageHead title="Team of 2022" subTitle="Team"/>
                 <div className="flex flex-wrap justify-center p-4">
                   {members22.length > 0 ? (
                     members22.map((data) => (
@@ -277,7 +277,7 @@ const Team = () => {
                 </div>
               </TabsContent>
               <TabsContent value="tab2">
-                <PageHead title="2023" />
+                <PageHead title="Team of 2023" subTitle="Team"/>
                 <div className="flex flex-wrap justify-center p-4">
                   {chair23.length > 0 ? (
                     chair23.map((data) => (
@@ -399,7 +399,7 @@ const Team = () => {
                 </div>
               </TabsContent>
               <TabsContent value="tab3">
-                <PageHead title="2024" />
+                <PageHead title="Team of 2024" subTitle="Team"/>
                 <div className="flex flex-wrap justify-center p-4">
                   {members24.length > 0 ? (
                     members24.map((data) => (
