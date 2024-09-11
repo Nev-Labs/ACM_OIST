@@ -58,7 +58,7 @@ export default function MainNav() {
         </div>
         <div className="hidden lg:flex space-x-1 z-50">
           <Link
-            href="deepshikhapatel@oriental.ac.in"
+            href="mailto:deepshikhapatel@oriental.ac.in"
             rel="noreferrer"
             target="_blank"
           >

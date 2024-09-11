@@ -30,7 +30,7 @@ export default function NavLinks() {
       >
         Team
       </Link>
-      <Link
+      {/* <Link
         href="/projects"
         className={cn(
           "transition-colors hover:text-foreground/80",
@@ -38,8 +38,8 @@ export default function NavLinks() {
         )}
       >
         Projects
-      </Link>
-      <Link
+      </Link> */}
+      {/* <Link
       href="/about"
         className={cn(
           "ransition-colors hover:text-foreground/80",
@@ -49,7 +49,7 @@ export default function NavLinks() {
         )}
       >
         About
-      </Link>
+      </Link> */}
     </div>
   );
 }
