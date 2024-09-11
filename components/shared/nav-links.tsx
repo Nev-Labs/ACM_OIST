@@ -40,7 +40,7 @@ export default function NavLinks() {
         Projects
       </Link>
       <Link
-      href="/about"
+        href="/about"
         className={cn(
           "ransition-colors hover:text-foreground/80",
           pathname === "/page-variants"
@@ -49,6 +49,17 @@ export default function NavLinks() {
         )}
       >
         About
+      </Link>
+      <Link
+        href="/interview"
+        className={cn(
+          "ransition-colors hover:text-foreground/80",
+          pathname === "/page-variants"
+            ? "text-foreground"
+            : "text-foreground/60"
+        )}
+      >
+        Interview
       </Link>
     </div>
   );
